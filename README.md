@@ -23,6 +23,8 @@ This is a RESTful web service for a blogging platform that provides secure CRUD 
 -  Users Module
 -  Category Module
 -  Post Module
+-  Comment Module
+
 
 ### ER Diagram
 The following Diagram depicts the flow of our Entity Relation Diagram to simplify the work flow.
