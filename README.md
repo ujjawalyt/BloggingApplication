@@ -34,34 +34,33 @@ This is a RESTful web service for a blogging platform that provides secure CRUD 
 * User Login: Allows users to authenticate themselves by providing their username and password. The provided code snippet handles the   user login process and generates a JWT token upon successful authentication.
 
 * Admin Features:
- * Enables administrators to manage the overall system and its configuration.
- * Grants administrative privileges to perform critical tasks.
- * Allows adding, editing, and deleting user accounts.
+  * Enables administrators to manage the overall system and its configuration.
+  * Grants administrative privileges to perform critical tasks.
+  * Allows adding, editing, and deleting user accounts.
 
 * Users Features:
- * Allows users to view and manage their profiles.
- * Provides options to update personal information and account settings.
- * Supports user interactions, such as following other users or sending friend requests.
- * Enables users to view their activity history and manage privacy settings.
+  * Allows users to view and manage their profiles.
+  * Provides options to update personal information and account settings.
+  * Supports user interactions, such as following other users or sending friend requests.
+  * Enables users to view their activity history and manage privacy settings.
 
 * Category Features:
-
-Enables the creation and management of different categories or topics for posts.
-Provides options to add, edit, and delete categories.
-Allows categorization of posts for better organization and navigation.
-Supports searching and filtering posts based on categories.
+  * Enables the creation and management of different categories or topics for posts.
+  * Provides options to add, edit, and delete categories.
+  * Allows categorization of posts for better organization and navigation.
+  * Supports searching and filtering posts based on categories.
 
 * Post Features:
- * Enables users to create, edit, and delete posts.
- * Provides options to format and style post content.
- * Supports multimedia content, such as images or videos, within posts.
- * Allows users to like, share, or bookmark posts.
- * Provides features for sorting and filtering posts based on various criteria.
+  * Enables users to create, edit, and delete posts.
+  * Provides options to format and style post content.
+  * Supports multimedia content, such as images or videos, within posts.
+  * Allows users to like, share, or bookmark posts.
+  * Provides features for sorting and filtering posts based on various criteria.
 
 * Comment Features:
- * Enables users to comment on posts and engage in discussions.
- * Supports threaded discussions to facilitate nested comments.
- * Provides options to like or dislike comments.
+  * Enables users to comment on posts and engage in discussions.
+  * Supports threaded discussions to facilitate nested comments.
+  * Provides options to like or dislike comments.
 Supports moderation features to manage and remove comments if necessary.
 
 
