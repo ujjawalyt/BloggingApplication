@@ -90,6 +90,33 @@ The following Diagram depicts the flow of our Entity Relation Diagram to simplif
 `http://localhost:8888/swagger-ui.html`
 
 
+### Users Module
+
+`POST /register:` Purpose:` Registers a new user.
+`Request Body:` JSON object representing the user details to be registered (UserDto).
+`Response:` Returns a UserDto object representing the registered user and HTTP status code 201 (Created).
+
+`PUT /update/{userId}:`
+`Purpose:` Updates an existing user.
+`Path Parameter:` userId - The ID of the user to update.
+`Request Body:` JSON object representing the updated user details (UserDto).
+`Response:` Returns a UserDto object representing the updated user and HTTP status code 202 (Accepted).
+
+`GET /{userId}:`
+`Purpose:` Retrieves a user by their ID.
+`Path Parameter:` userId - The ID of the user to retrieve.
+`Response:` Returns a UserDto object representing the retrieved user and HTTP status code 200 (OK).
+
+`DELETE /{userId}:`
+`Purpose:` Deletes a user by their ID.
+`Path Parameter:` userId - The ID of the user to delete.
+`Response:` Returns an HTTP status code 200 (OK) if the user is successfully deleted.
+
+`GET /getAll:`
+`Purpose:` Retrieves all users.
+`Response:` Returns a list of UserDto objects representing all users and HTTP status code 200 (OK).
+
+
 ### some screenshots of the Swagger UI 
 ![blog](https://user-images.githubusercontent.com/87421981/236360645-f2a9a65a-d749-41a1-adfe-5e7d60b570f9.PNG)
 
