@@ -28,38 +28,38 @@ This is a RESTful web service for a blogging platform that provides secure CRUD 
 
 ### Features
 
-* Users Login Module:-
+* Users Login Features:-
  * Allows users to create an account and log in to the system.
  * Provides authentication and authorization mechanisms to ensure secure access.
  * Manages user profiles, including personal information and account settings.
  * Supports password recovery and account activation processes.
 
-* Admin Module:
+* Admin Features:
  * Enables administrators to manage the overall system and its configuration.
  * Grants administrative privileges to perform critical tasks.
  * Allows adding, editing, and deleting user accounts.
 
-* Users Module:
+* Users Features:
  * Allows users to view and manage their profiles.
  * Provides options to update personal information and account settings.
  * Supports user interactions, such as following other users or sending friend requests.
  * Enables users to view their activity history and manage privacy settings.
 
-* Category Module:
+* Category Features:
 
 Enables the creation and management of different categories or topics for posts.
 Provides options to add, edit, and delete categories.
 Allows categorization of posts for better organization and navigation.
 Supports searching and filtering posts based on categories.
 
-* Post Module:
+* Post Features:
  * Enables users to create, edit, and delete posts.
  * Provides options to format and style post content.
  * Supports multimedia content, such as images or videos, within posts.
  * Allows users to like, share, or bookmark posts.
  * Provides features for sorting and filtering posts based on various criteria.
 
-* Comment Module:
+* Comment Features:
  * Enables users to comment on posts and engage in discussions.
  * Supports threaded discussions to facilitate nested comments.
  * Provides options to like or dislike comments.
@@ -147,7 +147,7 @@ The following Diagram depicts the flow of our Entity Relation Diagram to simplif
 `Purpose:` Retrieves all posts.
 `Response:` Returns a list of PostDto objects representing all posts and HTTP status code 202 (Accepted).
 
-*`GET /allpost/:`
+* `GET /allpost/:`
 `Purpose:` Retrieves all posts with pagination and sorting options.
 `Request Parameters:`
 `pageNumber (optional):` The page number to retrieve (default: 1).
@@ -176,6 +176,27 @@ The following Diagram depicts the flow of our Entity Relation Diagram to simplif
 *`GET /posts/{keyword}:`
 `Purpose:` Retrieves posts by searching for a keyword in the title.
 `Path Parameter: keyword -` The keyword to search
+
+
+ ### Comment Module
+ 
+ * `POST/{postId}/user/{userId}/comment:`
+ `Purpose:` Creates a new comment for a specific post and user.
+`Path Parameters:`
+`postId:` The ID of the post the comment belongs to.
+`userId:` The ID of the user creating the comment.
+`Request Body:` JSON object representing the comment details (CommentDto).
+`Response:` Returns a CommentDto object representing the created comment and HTTP status code 201 (Created).
+
+* `DELETE /comment/{commentId}:`
+`Purpose:` Deletes a comment by its ID.
+`Path Parameter:` commentId - The ID of the comment to delete.
+`Response:` Returns an HTTP status code 200 (OK) if the comment is successfully deleted.
+
+
+ ### Comment Module
+ 
+
 
 
 ### some screenshots of the Swagger UI 
