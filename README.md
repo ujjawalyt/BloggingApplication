@@ -18,7 +18,7 @@ This is a RESTful web service for a blogging platform that provides secure CRUD 
 
 
 ### Modules
--  Users Login Module
+-  Authentication Module
 -  Admin Module
 -  Users Module
 -  Category Module
@@ -26,13 +26,12 @@ This is a RESTful web service for a blogging platform that provides secure CRUD 
 -  Comment Module
 
 
+
+
 ### Features
 
-* Users Login Features:-
- * Allows users to create an account and log in to the system.
- * Provides authentication and authorization mechanisms to ensure secure access.
- * Manages user profiles, including personal information and account settings.
- * Supports password recovery and account activation processes.
+* Authentication Features:
+* User Login: Allows users to authenticate themselves by providing their username and password. The provided code snippet handles the   user login process and generates a JWT token upon successful authentication.
 
 * Admin Features:
  * Enables administrators to manage the overall system and its configuration.
@@ -89,6 +88,20 @@ The following Diagram depicts the flow of our Entity Relation Diagram to simplif
 
 `http://localhost:8888/swagger-ui.html`
 
+###  Auth Module
+
+* `User Login:`
+`Endpoint: POST /login`
+`Functionality:` Authenticates a user and generates a JWT token based on their login credentials.
+`Request Body:` Contains the user's login credentials (JwtAuthRequest).
+`Response:`Returns a JwtAuthResponse object containing the generated JWT token.
+
+* `User Authentication:`
+`Method:` private void authenticate(String username, String password)
+`Functionality:` Performs user authentication using the provided username and password.
+`Process:` Uses the authenticationManager to authenticate the user's credentials by creating a UsernamePasswordAuthenticationToken with the username and password, then passing it to the authenticationManager.authenticate() method.
+
+
 
 ### Users Module
 
@@ -113,7 +126,7 @@ The following Diagram depicts the flow of our Entity Relation Diagram to simplif
 `Response:` Returns an HTTP status code 200 (OK) if the user is successfully deleted.
 
 * `GET /getAll:`
-`Purpose:` Retrieves all users.
+`Purpose:` Retrieves all users by Admin.
 `Response:` Returns a list of UserDto objects representing all users and HTTP status code 200 (OK).
 
 
@@ -144,7 +157,7 @@ The following Diagram depicts the flow of our Entity Relation Diagram to simplif
 `Response:` Returns an HTTP status code 200 (OK) if the post is successfully deleted.
 
 * `GET /allposts:`
-`Purpose:` Retrieves all posts.
+`Purpose:` Retrieves all posts by user and admin.
 `Response:` Returns a list of PostDto objects representing all posts and HTTP status code 202 (Accepted).
 
 * `GET /allpost/:`
@@ -195,6 +208,31 @@ The following Diagram depicts the flow of our Entity Relation Diagram to simplif
 
 
  ### Comment Module
+ 
+ * `POST /add:`
+`Purpose:` Creates a new category.
+`Request Body:` JSON object representing the category details (CategoryDto).
+`Response:` Returns a CategoryDto object representing the created category and HTTP status code 201 (Created).
+
+* `PUT /update/{categoryId}:`
+`Purpose:` Updates an existing category.
+`Path Parameter:` categoryId - The ID of the category to update.
+`Request Body:` JSON object representing the updated category details (CategoryDto).
+`Response:` Returns a CategoryDto object representing the updated category and HTTP status code 202 (Accepted).
+
+* `GET /{categoryId}:`
+`Purpose:` Retrieves a category by its ID.
+`Path Parameter:` categoryId - The ID of the category to retrieve.
+`Response:` Returns a CategoryDto object representing the retrieved category and HTTP status code 200 (OK).
+
+* `DELETE /{categoryId}:`
+`Purpose:` Deletes a category by its ID.
+`Path Parameter:` categoryId - The ID of the category to delete.
+`Response:` Returns an HTTP status code 200 (OK) if the category is successfully deleted.
+
+* `GET /getAll:`
+`Purpose:` Retrieves all categories.
+`Response:` Returns a list of CategoryDto objects representing all categories and HTTP status code 200 (OK).
  
 
 
