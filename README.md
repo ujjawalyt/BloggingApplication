@@ -42,7 +42,6 @@ This is a RESTful web service for a blogging platform that provides secure CRUD 
   * Allows users to view and manage their profiles.
   * Provides options to update personal information and account settings.
   * Supports user interactions, such as following other users or sending friend requests.
-  * Enables users to view their activity history and manage privacy settings.
 
 * Category Features:
   * Enables the creation and management of different categories or topics for posts.
@@ -53,13 +52,11 @@ This is a RESTful web service for a blogging platform that provides secure CRUD 
 * Post Features:
   * Enables users to create, edit, and delete posts.
   * Provides options to format and style post content.
-  * Supports multimedia content, such as images or videos, within posts.
-  * Allows users to like, share, or bookmark posts.
+  * Allows users to like, share posts.
   * Provides features for sorting and filtering posts based on various criteria.
 
 * Comment Features:
   * Enables users to comment on posts and engage in discussions.
-  * Supports threaded discussions to facilitate nested comments.
   * Provides options to like or dislike comments.
 Supports moderation features to manage and remove comments if necessary.
 
