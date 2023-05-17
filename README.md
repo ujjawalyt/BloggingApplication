@@ -31,7 +31,7 @@ This is a RESTful web service for a blogging platform that provides secure CRUD 
 ### Features
 
 * Authentication Features:
-* User Login: Allows users to authenticate themselves by providing their username and password. The provided code snippet handles the   user login process and generates a JWT token upon successful authentication.
+  * User Login : Allows users to authenticate themselves by providing their username and password. The provided code snippet handles the   user login process and generates a JWT token upon successful authentication.
 
 * Admin Features:
   * Enables administrators to manage the overall system and its configuration.
