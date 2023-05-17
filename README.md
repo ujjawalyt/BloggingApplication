@@ -39,25 +39,29 @@ This is a RESTful web service for a blogging platform that provides secure CRUD 
   * Allows adding, editing, and deleting user accounts.
 
 * Users Features:
-  * Allows users to view and manage their profiles.
-  * Provides options to update personal information and account settings.
-  * Supports user interactions, such as following other users
+  * User registration: Enables new users to register and create an account.
+  * User profile management: Allows users to update their profile information.
+  * User retrieval: Retrieves user information based on the user ID.
+  * User deletion: Deletes a user account from the system.
+  * User listing: Retrieves a list of all users (typically for administrative purposes).
 
 * Category Features:
-  * Enables the creation and management of different categories or topics for posts.
-  * Provides options to add, edit, and delete categories.
-  * Allows categorization of posts for better organization and navigation.
-  * Supports searching and filtering posts based on categories.
+  * Category creation: Enables the creation of new categories.
+  * Category updating: Allows users to update existing categories.
+  * Category retrieval: Retrieves a specific category based on the category ID.
+  * Category deletion: Deletes a category from the system.
+  * Category listing: Retrieves a list of all categories..
 
 * Post Features:
-  * Enables users to create, edit, and delete posts.
-  * Provides options to format and style post content.
-  * Allows users to like, share posts.
-  * Provides features for sorting and filtering posts based on various criteria.
+  * Post creation: Allows users to create new posts.
+  * Post updating: Enables users to update their existing posts.
+  * Post retrieval: Retrieves a specific post based on the post ID.
+  * Post deletion: Deletes a post from the system.
+  * Post listing: Retrieves a list of posts based on various criteria, such as user, category, or keyword.
 
 * Comment Features:
-  * Enables users to comment on posts and engage in discussions.
-Supports moderation features to manage and remove comments if necessary.
+  * Comment creation: Allows users to add comments to specific posts.
+  * Comment deletion: Deletes a comment from a post.
 
 
 ### ER Diagram
