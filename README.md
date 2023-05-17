@@ -41,7 +41,7 @@ This is a RESTful web service for a blogging platform that provides secure CRUD 
 * Users Features:
   * Allows users to view and manage their profiles.
   * Provides options to update personal information and account settings.
-  * Supports user interactions, such as following other users or sending friend requests.
+  * Supports user interactions, such as following other users
 
 * Category Features:
   * Enables the creation and management of different categories or topics for posts.
@@ -57,7 +57,6 @@ This is a RESTful web service for a blogging platform that provides secure CRUD 
 
 * Comment Features:
   * Enables users to comment on posts and engage in discussions.
-  * Provides options to like or dislike comments.
 Supports moderation features to manage and remove comments if necessary.
 
 
@@ -197,7 +196,7 @@ The following Diagram depicts the flow of our Entity Relation Diagram to simplif
 `Response:` Returns an HTTP status code 200 (OK) if the comment is successfully deleted.
 
 
- ### Comment Module
+ ### Category Module
  
  * `POST /add:`
 `Purpose:` Creates a new category.
