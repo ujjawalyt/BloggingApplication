@@ -95,12 +95,6 @@ The following Diagram depicts the flow of our Entity Relation Diagram to simplif
 `Request Body:` Contains the user's login credentials (JwtAuthRequest).
 `Response:`Returns a JwtAuthResponse object containing the generated JWT token.
 
-* `User Authentication:`
-`Method:` private void authenticate(String username, String password)
-`Functionality:` Performs user authentication using the provided username and password.
-`Process:` Uses the authenticationManager to authenticate the user's credentials by creating a UsernamePasswordAuthenticationToken with the username and password, then passing it to the authenticationManager.authenticate() method.
-
-
 
 ### Users Module
 
