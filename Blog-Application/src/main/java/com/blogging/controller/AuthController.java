@@ -1,5 +1,7 @@
 package com.blogging.controller;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +16,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.blogging.dto.JwtAuthRequest;
 import com.blogging.dto.JwtAuthResponse;
+import com.blogging.dto.UserDto;
 import com.blogging.security.JwtTokenHelper;
+import com.blogging.service.UserService;
 
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
 
@@ -30,6 +34,15 @@ public class AuthController {
 	
 	@Autowired
 	private AuthenticationManager authenticationManager;
+	
+	@Autowired
+	private UserService userService;
+	
+	@PostMapping("/add")
+	public ResponseEntity<UserDto> createNewUserHandler(@Valid @RequestBody UserDto userDto) {
+		
+		return new ResponseEntity<UserDto>(userService.createNewUser(userDto),HttpStatus.CREATED);
+	}
 	
 	
 	@PostMapping("/login")
@@ -54,6 +67,8 @@ public class AuthController {
 		
 		this.authenticationManager.authenticate(authenticationToken);
 	}
+	
+	
 	
 	
 }

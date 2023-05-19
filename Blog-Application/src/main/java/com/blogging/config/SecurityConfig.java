@@ -36,7 +36,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	private JwtAunthicationFilter jwtAunthicationFilter;
 	
 	public static  final String[] PUBLIC_URLS = {
-			"/blog/auth/login" ,
+			"/blog/auth/**" ,
 			"/v3/api-docs",
 			"/v2/api-docs",
 			"/swagger-resources/**",
